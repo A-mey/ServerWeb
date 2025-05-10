@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package otp.v1;
+
+service OtpService {
+  rpc SendOtp(SendOtpRequest) returns (SendOtpResponse);
+  rpc ValidateOtp(ValidateOtpRequest) returns (ValidateOtpResponse);
+}
+
+message SendOtpRequest {
+  string email = 1;
+}
+
+message SendOtpResponse {}
+
+message ValidateOtpRequest {
+  string email = 1;
+  string hash = 2;
+  string otp = 3;
+}
+
+message ValidateOtpResponse {
+  bool otp_validation = 1;
+}

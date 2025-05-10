@@ -1,0 +1,6 @@
+version: v2
+plugins:
+    
+  - remote: buf.build/community/stephenh-ts-proto:v2.6.1
+    out: src/login/
+    opt: nestJs=true,useExactTypes=false,fileSuffix=.grpc

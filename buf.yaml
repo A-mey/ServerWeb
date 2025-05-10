@@ -1,0 +1,8 @@
+version: v2
+# modules:
+# name: buf.build/nest/login
+modules:
+  - path: proto/otp/v1
+  - path: proto/login/v1
+deps:
+  - buf.build/bookoto/server
